@@ -1,0 +1,171 @@
+:root {
+  --bg: #0d0d0f;
+  --surface: #141418;
+  --text: #e6e6e6;
+  --muted: #8a8a92;
+  --accent: #7dd3fc;
+  --border: #1f1f24;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  line-height: 1.7;
+  font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+}
+
+nav .brand {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav .links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: 0.15s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+p.lead {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.15s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+strong {
+  font-weight: 600;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+ul.navlist li::before {
+  content: "";
+}
+
+ul.navlist li {
+  padding-left: 0;
+}
+
+ul.navlist li a {
+  color: var(--accent);
+}
+
+ul.contactlist li {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 1.25rem;
+}
+
+ul.contactlist li::before {
+  content: "";
+}
+
+ul.contactlist .label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.5rem 1.15rem 3rem;
+  }
+  nav {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+  }
+  nav .links {
+    gap: 1rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+}
